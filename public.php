@@ -8,8 +8,15 @@ $hosts = array(
 	"ipv6." . $oHost => "ipv6." . $pHost,
 	"ipv4." . $oHost => "ipv4." . $pHost,
 	"id." . $oHost => "id." . $pHost,
-	"scholar" . $oHost => "scholar" . $pHost
+	"scholar." . $oHost => "scholar." . $pHost
 );
+/*just add domain here like the added to make it support more subdomain of google
+such as 
+"news." . $oHost => "news." . $pHost,
+for Google News
+and you can add more domains not restricted in Google then it will perform as
+a big mirror system
+*/
 $hostsFlip = array_flip($hosts);
 $staticResSvr = "https://static.g.ppx.pw";
 
