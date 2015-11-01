@@ -7,7 +7,7 @@ else $scheme = 'http';
 $procotolHeader = $scheme . "://";
 $host = (isset($hostsFlip[$_SERVER['HTTP_HOST']]) ? $hostsFlip[$_SERVER['HTTP_HOST']] : $oHost);
 
-
+//this part are partly modified from https://github.com/joshdick/miniProxy/blob/master/miniProxy.php
 function makeRequest($url){
 	global $host, $pHost, $oHost, $hosts, $hostsFlip, $staticResSvr;
 	$user_agent = $_SERVER['HTTP_USER_AGENT'];
