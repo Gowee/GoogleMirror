@@ -6,23 +6,18 @@ A PHP program to set up a mirror server of Google search service in minutes.
 
 ---
 
-#### Introduction of Each Folders  ####
-
-- SearchMirror :
-	- core scripts to proxy user's request and send them to Google search server
-- ResFetch :
-	- proxy some static web scripts and images
-
----
 #### Guide for Setting up ####
+
 ---
+
+**Deploy:**
 - Before setting up, you need :
 	- PHP 5.4+ runtime environment (outside China mainland and etc)
-	- two web host associated with (sub or top) domains (one for search, one for static resources)
+	- a wildcard certificate for the domain you  want to set mirror up on
 	- SSL configured for the domain to be used (only available on 443 port)
-- download and unzip the whole project folder
-- replace the demo domains with your own domains in each PHP scripts (e.g. www.ppx.pw => www.example.com; static.ppx.pw => res.example.com)
-- deploy all the scripts in "SearchMirror" to one host and scripts in "ResFetch" to another host
-- and then you will see your mirror server running
+- Download all the file included in the repo (except README.md and LISENCE)
+- Open the public.php, and replace the default domain to yours ($pHost = "yourdomain.com";)
+- It works! 
 
----
+**Notice:**
+- About DNS record: www. needs pointing at least, and ipv4.&&ipv6. which can handle the captcha service for the server under a lot of requests is recommended.
