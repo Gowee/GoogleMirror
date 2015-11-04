@@ -9,11 +9,12 @@
 **部署：**
 - 安装前准备 :
 	- 运行环境： PHP 5.4+
-	- 通配符证书（www. 的单域名证书也可）
+	- 通配符证书（www. 的单域名证书亦可）
 	- 配置好SSL
 - 下载文件
 - 打开 public.php，并替换默认域名为你自己的域名 ($pHost = "yourdomain.com";)
+- 打开 .htaccess，并替换默认域名为你自己的域名（RewriteCond %{HTTP_HOST} ^static.yourdomain.com$ [NC]）
 - 上传到你的 PHP环境中
 
 **注意：**
-- 关于 DNS 记录: 至少需要 www. 指向，对于大流量服务器建议添加 ipv4. 和 ipv6. 指向以处理验证码。 
+- 关于 DNS 记录: 至少需要 www.（主代理） 和 static.（静态资源） 指向，对于大流量服务器建议添加 ipv4. 和 ipv6. 指向以处理验证码。 
