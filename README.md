@@ -13,8 +13,9 @@ A PHP program to set up a mirror server of Google search service in minutes.
 	- SSL configured for the domain to be used (only available on 443 port)
 - Download all the file included in the repo (except README.md and LISENCE)
 - Open the public.php, and replace the default domain to yours ($pHost = "yourdomain.com";)
+- Open the .htaccess, and replace the default domain to yours (RewriteCond %{HTTP_HOST} ^static.yourdomain.com$ [NC])
 - Upload files to your host
 - It works! 
 
 **Notice:**
-- About DNS record: www. needs pointing at least, and ipv4.&&ipv6. which can handle the captcha service for the server under a lot of requests is recommended.
+- About DNS record: www.(proxy for www.google.com) & static.(for static resource) needs pointing at least, and ipv4.&&ipv6. which can handle the captcha service for the server under a lot of requests is recommended.
