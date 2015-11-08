@@ -23,11 +23,12 @@ function makeRequest($url){
 	$curlRequestHeaders = array();
 
 	switch($host){
+		case $oHost:
 		case "www." . $oHost:
 			if(!isset($_COOKIE['PREF'])){
 				$LD = explode(",", explode(";", $_SERVER['HTTP_ACCEPT_LANGUAGE'])[0])[0];
 				if (strlen($LD) === 0) $LD = "zh-TW";//Default Language
-				$browserRequestHeaders['Cookie'] .= "PREF=ID=1111111111111111:FF=0:CR=2:SG=1:V=1:LD=" . $LD;
+				$browserRequestHeaders['Cookie'] = "pgv_pvi=1122260992; pgv_si=s123100160; DV=om_DEzleVU4YdPPDgiI1UyXJXUDLoQI; PREF=ID=1111111111111111:FF=0:LD=$LD:CR=2:TM=1446960882:LM=1446961839:V=1:S=qJLKGZjqaTafnlF4";
 			}
 		break;//preset cookie in case to avoid country redirect
 		default:
