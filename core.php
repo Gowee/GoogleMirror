@@ -110,7 +110,7 @@ foreach ($headerLines as $header) {
 			header($header, true);
 		}
 		else header($header, false);*/
-		header($header, true);//allow header one more times
+		header($header, false);//allow header one more times
 	}
 }
 if(isNeedHostReplace($responseInfo["content_type"])){
