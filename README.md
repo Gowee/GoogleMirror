@@ -9,13 +9,12 @@ A PHP program to set up a mirror server of Google search service in minutes.
 **Deploy:**
 - Before setting up, you need :
 	- PHP 5.4+ runtime environment (outside China mainland and etc)
-	- a wildcard certificate (single domain certificate for www. also works) for the domain you  want to set mirror up on
+	- a wildcard certificate for the domain you  want to set mirror up on
 	- SSL configured for the domain to be used (only available on 443 port)
 - Download all the file included in the repo (except README.md and LISENCE)
 - Open the public.php, and replace the default domain to yours ($pHost = "yourdomain.com";)
-- Open the .htaccess, and replace the default domain to yours (RewriteCond %{HTTP_HOST} ^static.yourdomain.com$ [NC])
 - Upload files to your host
 - It works! 
 
 **Notice:**
-- About DNS record: www.(proxy for www.google.com) & static.(for static resource) needs pointing at least, and ipv4.&&ipv6. which can handle the captcha service for the server under a lot of requests is recommended.
+- About DNS record: (@.)yourdomain.com & *.yourdomain.com point to your host

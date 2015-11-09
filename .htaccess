@@ -1,8 +1,5 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^static.g.ppx.pw$ [NC]
-RewriteRule ^(.*)$ static.php [L]
-
-#RewriteCond %{HTTP_HOST} gstatic.com$ [NC]
-#RewriteRule ^(.*)$ static.php
 
 RewriteRule ^(.*)$ core.php [L]
+#Does not need to modify anything here.
+#All request except existed static files will be handled by core.php.
